@@ -1,27 +1,20 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
-import "./layout.styles.scss";
+import './layout.styles.scss';
+
+import { Footer } from '../../components/Footer';
+import { Navbar } from '../../components/Navbar';
 
 const Layout = () => {
-  return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Outlet />
-    </>
-  );
+	return (
+		<>
+			<Navbar />
+			<div className="container content">
+				<Outlet />
+			</div>
+			<Footer />
+		</>
+	);
 };
 
 export default Layout;
