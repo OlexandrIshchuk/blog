@@ -1,5 +1,14 @@
+import AllPosts from '../../components/AllPosts';
+
+import './blog.styles.scss';
+
 const Contact = () => {
-  return <h1>Blog</h1>;
+	return (
+		<>
+			<h1 className="text-center">Blog</h1>
+			<AllPosts />
+		</>
+	);
 };
 
 export default Contact;
